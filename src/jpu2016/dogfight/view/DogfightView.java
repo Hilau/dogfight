@@ -5,7 +5,7 @@ import java.util.Observable;
 import jpu2016.dogfight.controller.IOrderPerformer;
 import jpu2016.dogfight.model.IDogfightModel;
 
-public class DogfightView {
+public class DogfightView implements IViewSystem{
 	public DogfightView(IOrderPerformer orderPerformed, IDogfightModel dogfightModel, Observable observable){
 		
 	}

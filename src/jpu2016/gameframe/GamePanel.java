@@ -3,7 +3,7 @@ package jpu2016.gameframe;
 import java.awt.Graphics;
 import java.util.Observable;
 
-public class GamePanel {
+public class GamePanel implements Observer {
 	public GamePanel (IGraphicsBuilder graphicsBuilder){
 		
 	}
