@@ -13,6 +13,7 @@ Direction direction;
 Position position;
 Image image;
 IDogfightModel dogfightModel;
+private Color color;
 
 
 	public Mobile(Direction direction,Position position, Dimension dimension, int speed, String image){	
@@ -34,12 +35,12 @@ IDogfightModel dogfightModel;
 	public int getSpeed(){
 		return this.speed;
 	}
-	/*public int getWidth(){
-		return WIDTH;
+	public int getWidth(){
+		return 1;
 	}
 	public int getHeight(){
-		return this.height;
-	}*/
+		return 1;
+	}
 	public void move(){
 		
 	}
@@ -62,9 +63,9 @@ IDogfightModel dogfightModel;
 	private void moveLeft(){
 		
 	}
-//	public Color getColor(){
-//	return image;
-//	}
+	public Color getColor(){
+		return color;
+	}
 	public IDogfightModel getIDogfightModel(){
 		return this.dogfightModel;
 	}
