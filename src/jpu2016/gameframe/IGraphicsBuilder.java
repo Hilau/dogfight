@@ -4,15 +4,9 @@ import java.awt.Graphics;
 import java.awt.image.ImageObserver;
 
 public interface IGraphicsBuilder {
-	public default void applyModelToGraphic(Graphics graphics, ImageObserver observer){
-		
-	}
+	public void applyModelToGraphic(Graphics graphics, ImageObserver observer);
 	
-	public default int getGlobalWidth(){
-		return 1;
-	}
+	public int getGlobalWidth();
 	
-	public default int getGlobalHeight(){
-		return 1;
-	}
+	public int getGlobalHeight();
 }

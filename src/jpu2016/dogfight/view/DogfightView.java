@@ -21,4 +21,5 @@ public class DogfightView implements IViewSystem{
 	public void closeAll(){
 		
 	}
+
 }
