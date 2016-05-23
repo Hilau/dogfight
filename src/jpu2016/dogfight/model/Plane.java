@@ -1,6 +1,6 @@
 package jpu2016.dogfight.model;
 
-public class Plane extends Mobile{
+public abstract class Plane extends Mobile{
 
 	private static int SPEED = 2;
 	private static int WIDTH = 100;
@@ -12,9 +12,11 @@ public class Plane extends Mobile{
 		
 	}
 	public boolean isPlayer(int player){
+		return false;
 		
 	}
 	public boolean hit(){
+		return false;
 		
 	}
 }

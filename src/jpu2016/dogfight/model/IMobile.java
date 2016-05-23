@@ -5,6 +5,7 @@ import java.awt.Point;
 
 public interface IMobile {
 
+	
 	public Direction getDirection();
 	
 	public void setDirection(Direction direction);
@@ -27,7 +28,7 @@ public interface IMobile {
 	
 	public boolean isPlayer(int player);
 	
-	public abstract void setDogfightModel(DogfigtModel dogfightModel);
+	public abstract void setDogfightModel(DogfightModel dogfightModel);
 	
 	public boolean hit();
 	

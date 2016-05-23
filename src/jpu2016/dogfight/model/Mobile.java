@@ -1,13 +1,19 @@
 package jpu2016.dogfight.model;
+import java.awt.Color;
+import java.awt.Image;
 import java.awt.Point;
 import java.awt.color.*;
+import java.awt.geom.Area;
 
-public class Mobile implements IMobile{
+public abstract class Mobile implements IMobile{
 	
 int speed;
 Dimension dimension;
 Direction direction;
 Position position;
+Image image;
+IDogfightModel dogfightModel;
+
 
 	public Mobile(Direction direction,Position position, Dimension dimension, int speed, String image){	
 		this.direction = direction;
@@ -19,7 +25,7 @@ Position position;
 		this.direction = direction;
 	}
 	public Point getPosition(){
-		new Point();
+		return new Point();
 		
 	}
 	public Dimension getDimension(){
@@ -28,12 +34,12 @@ Position position;
 	public int getSpeed(){
 		return this.speed;
 	}
-	public int getWidth(){
-		return width;
+	/*public int getWidth(){
+		return WIDTH;
 	}
 	public int getHeight(){
 		return this.height;
-	}
+	}*/
 	public void move(){
 		
 	}
@@ -41,6 +47,7 @@ Position position;
 		
 	}
 	public boolean isPlayer(int player){
+		return false;
 		
 	}
 	private void moveUp(){
@@ -55,19 +62,21 @@ Position position;
 	private void moveLeft(){
 		
 	}
-	public Color getColor(){
-		return this.color;
-	}
+//	public Color getColor(){
+//	return image;
+//	}
 	public IDogfightModel getIDogfightModel(){
 		return this.dogfightModel;
 	}
 	public IDogfightModel setIDogfightModel(IDogfightModel dogfightModel){
-		this.dogfightModel = dogfightModel;
+		return this.dogfightModel = dogfightModel;
 	}
 	public boolean hit(){
+		return false;
 		
 	}
 	public boolean isWeapon(){
+		return false;
 		
 	}
 	public Image getImage(){

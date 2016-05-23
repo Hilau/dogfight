@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
-public class DogfightModel extends Observable implements IDogfightModel {
+public abstract class DogfightModel extends Observable implements IDogfightModel {
 
+	IMobile mobile;
+	Sky sky;
+	
 	public DogfightModel(){
 			
 	}
@@ -19,10 +22,11 @@ public class DogfightModel extends Observable implements IDogfightModel {
 		
 	}
 	public ArrayList<IMobile> getMobiles(){
-		return this.mobile;
+		return ((ArrayList<IMobile>) this.mobile);
 	}
 	public IMobile getMobileByPlayer(int player){
-		return this.mobileByPlayer;
+		return mobile;
+		
 	}
 	public void setMobilesHavesMoved(){
 	}
