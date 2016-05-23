@@ -12,7 +12,6 @@ public class UserOrder {
 	
 	public Order getOrder(){
 		return this.order;
-		
 	}
 	
 	public int getPlayer()
