@@ -1,8 +1,8 @@
 package jpu2016.dogfight.model;
 
 public class Dimension {
-int width;
-int height;
+	private int width;
+	private int height;
 
 	public Dimension(int width,int height){
 		

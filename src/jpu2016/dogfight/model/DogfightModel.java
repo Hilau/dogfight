@@ -1,8 +1,10 @@
 package jpu2016.dogfight.model;
 
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
-public class DogfightModel {
+public class DogfightModel extends Observable implements IDogfightModel {
 
 	public DogfightModel(){
 			
