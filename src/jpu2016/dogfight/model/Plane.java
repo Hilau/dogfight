@@ -7,16 +7,15 @@ public class Plane extends Mobile{
 	private static int HEIGHT = 30;
 	private int player;
 	
-	public Plane(int player,Direction direction,Position position, String image){
-		super(direction,position,new Dimension(WIDTH,HEIGHT),SPEED, image);
-		
+	public Plane(int player, Direction direction, Position position, String image){
+		super(direction, position, new Dimension(WIDTH,HEIGHT),SPEED, image);		
 	}
+	
 	public boolean isPlayer(int player){
-		return false;
-		
+		return this.player == player;
 	}
+	
 	public boolean hit(){
-		return false;
-		
+		return true;		
 	}
 }
