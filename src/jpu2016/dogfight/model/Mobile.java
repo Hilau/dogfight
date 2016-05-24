@@ -61,23 +61,23 @@ private Color color;
 	}
 	
 	private void moveUp(){
-		
+		setDirection(direction.UP);
 	}
 	
 	private void moveRight(){
-		
+		setDirection(direction.RIGHT);
 	}
 	
 	private void moveDown(){
-		
+		setDirection(direction.DOWN);
 	}
 	
 	private void moveLeft(){
-		
+		setDirection(direction.LEFT);
 	}
 	
 	public Color getColor(){
-		return color;
+		return null;
 	}
 	public IDogfightModel getIDogfightModel(){
 		return this.dogfightModel;
