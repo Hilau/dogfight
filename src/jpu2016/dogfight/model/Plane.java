@@ -16,6 +16,7 @@ public class Plane extends Mobile{
 	}
 	
 	public boolean hit(){
-		return true;		
+		this.getIDogfightModel().removeMobile(this);	
+		return true;
 	}
 }
