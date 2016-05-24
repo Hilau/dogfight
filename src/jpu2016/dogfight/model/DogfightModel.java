@@ -30,6 +30,9 @@ public class DogfightModel extends Observable implements IDogfightModel {
 	}
 	
 	public IMobile getMobileByPlayer(int player){
+		if(mobile.isPlayer(player))
+			return null;
+		
 		return mobile;
 	}
 	
