@@ -13,9 +13,6 @@ public class Position {
 		this.maxY = maxY;
 	}
 	
-	public Position(Position position){
-	}
-	
 	public double getX(){
 		return this.x;
 	}

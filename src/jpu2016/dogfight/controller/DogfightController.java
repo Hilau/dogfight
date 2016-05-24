@@ -8,6 +8,7 @@ import jpu2016.dogfight.model.IMobile;
 import jpu2016.dogfight.model.Missile;
 import jpu2016.dogfight.model.Mobile;
 import jpu2016.dogfight.model.Plane;
+import jpu2016.dogfight.model.Position;
 import jpu2016.dogfight.view.IViewSystem;
 
 public class DogfightController implements IOrderPerformer {
@@ -66,21 +67,19 @@ public class DogfightController implements IOrderPerformer {
 	
 	private void lauchMissile(int player)
 	{
-		// Récupérer la position de l'avion (voir avec le joueur)
-		
-		// Missile m = new Missile(Direction.UP, new Dimension(30, 30));
+		// Missile m = new Missile(Direction.UP, new Position();
 	}
 	
 	private void gameLoop()
 	{
-		for(IMobile m : dogfightModel.getMobiles())
+		/*for(IMobile m : dogfightModel.getMobiles())
 		{
 			if(m.hit() == false)
 			{
 				m.move();
 			}
 			
-		}
+		}*/
 		
 	}
 	
