@@ -9,6 +9,7 @@ import jpu2016.dogfight.model.Missile;
 import jpu2016.dogfight.model.Mobile;
 import jpu2016.dogfight.model.Plane;
 import jpu2016.dogfight.model.Position;
+import jpu2016.dogfight.view.DogfightView;
 import jpu2016.dogfight.view.IViewSystem;
 
 public class DogfightController implements IOrderPerformer {
@@ -17,6 +18,7 @@ public class DogfightController implements IOrderPerformer {
 	private IViewSystem viewSystem;
 	private DogfightModel dogfightModel;
 	private Position position;
+	private DogfightView dogfightView;
 	
 	public DogfightController(IDogfightModel dogfightModel)
 	{
@@ -59,6 +61,7 @@ public class DogfightController implements IOrderPerformer {
 	public void play()
 	{
 		this.gameLoop();
+		// dogfightView.displayMessage("Fin de la partie");
 	}
 	
 	public void setViewSystem(IViewSystem viewSystem)
@@ -110,7 +113,7 @@ public class DogfightController implements IOrderPerformer {
 		
 		/*for(int i=0;i<dogfightModel.getMobiles().length();i++)
 		{
-			System.out.print(dogfightModel.getMobiles().size());
+			
 		}*/
 		
 	}
