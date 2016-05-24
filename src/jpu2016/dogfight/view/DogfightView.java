@@ -9,7 +9,7 @@ import jpu2016.gameframe.GameFrame;
 
 import java.lang.*;
 
-public abstract class DogfightView implements IViewSystem, Runnable{
+public class DogfightView implements IViewSystem, Runnable{
 	
 	private EventPerformer eventPerformer;
 	private GraphicsBuilder graphicsBuilder;
