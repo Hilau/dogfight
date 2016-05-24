@@ -29,8 +29,7 @@ private Color color;
 	}
 	
 	public Point getPosition(){
-		return new Point();
-		
+		return new Point();	
 	}
 	
 	public Dimension getDimension(){
@@ -90,9 +89,26 @@ private Color color;
 		
 	}
 	
-	public boolean isWeapon(){
+	/*public boolean isWeapon(){
 		return false;		
+	}*/
+	
+	public boolean isWeapon(final IMobile mobile, final IMobile weapon) {
+		if (((weapon.getPosition().getX() / weapon.getWidth()) >= (mobile.getPosition().getX() /
+		weapon.getWidth()))
+		 && ((weapon.getPosition().getX() / weapon.getWidth()) <=
+		((mobile.getPosition().getX() + mobile.getWidth()) / weapon.getWidth()))) {
+		 if (((weapon.getPosition().getY() / weapon.getHeight()) >= (mobile.getPosition().getY()
+		/ weapon.getHeight()))
+		 && ((weapon.getPosition().getY() / weapon.getHeight()) <=
+		((mobile.getPosition().getY() + mobile.getHeight()) / weapon.getHeight()))) {
+		 return true;
+		 }
 	}
+		
+	return false;
+	} 
+
 	
 	public Image getImage(){
 		return this.image;
