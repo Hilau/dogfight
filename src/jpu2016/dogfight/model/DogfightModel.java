@@ -31,14 +31,15 @@ public class DogfightModel extends Observable implements IDogfightModel {
 	
 	public IMobile getMobileByPlayer(int player){
 		if(mobile.isPlayer(player))
-			return null;
+			return mobile;
 		
-		return mobile;
+		return null;
 	}
 	
 	public void setMobilesHavesMoved(){
 	}
 	
 	public void removeMobile(IMobile Mobile) {
+		
 	}
 }

@@ -27,8 +27,8 @@ private Color color;
 		this.direction = direction;
 	}
 	
-	public Point getPosition(){
-		return new Point();	
+	public Position getPosition(){
+		return this.position;	
 	}
 	
 	public Dimension getDimension(){
@@ -40,11 +40,11 @@ private Color color;
 	}
 	
 	public int getWidth(){
-		return 1;
+		return dimension.getWidth();
 	}
 	
 	public int getHeight(){
-		return 1;
+		return dimension.getHeight();
 	}
 	
 	public void move(){

@@ -18,7 +18,7 @@ public class Missile extends Mobile{
 		return HEIGHT;
 	}
 	public void move(){
-		if(MAX_DISTANCE_TRAVELED != distanceTraveled){
+		if(MAX_DISTANCE_TRAVELED >= distanceTraveled){
 		distanceTraveled += 4 ;
 		}
 		else{
