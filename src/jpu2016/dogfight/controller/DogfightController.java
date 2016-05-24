@@ -68,7 +68,28 @@ public class DogfightController implements IOrderPerformer {
 	
 	private void lauchMissile(int player)
 	{
-		// Missile m = new Missile(Direction.UP, Mobile.getPosition()+5);
+		IMobile p = dogfightModel.getMobileByPlayer(player);
+		
+		switch(p.getDirection())
+		{
+			case UP:
+				Missile m = new Missile(Direction.UP, p.getPosition());
+				//Missile m2 = new Missile(Direction.UP, p.getY()-1);
+			break;
+			
+			case DOWN:
+				// Missile m = new Missile(Direction.UP, p.getPosition());
+			break;
+			
+			case LEFT:
+				// Missile m = new Missile(Direction.UP, p.getPosition());
+			break;
+			
+			case RIGHT:
+				// Missile m = new Missile(Direction.UP, p.getPosition());
+			break;
+		}
+		
 	}
 	
 	private void gameLoop()
