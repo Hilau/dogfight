@@ -101,6 +101,16 @@ public class DogfightController implements IOrderPerformer {
 				m.move();
 			}
 			
+			else
+			{
+				break;
+			}
+			
+		}*/
+		
+		/*for(int i=0;i<dogfightModel.getMobiles().length();i++)
+		{
+			System.out.print(dogfightModel.getMobiles().size());
 		}*/
 		
 	}
