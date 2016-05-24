@@ -32,5 +32,5 @@ public interface IMobile {
 	
 	public boolean hit();
 	
-	public boolean isWeapon(final IMobile mobile, final IMobile weapon);
+	public boolean isWeapon();
 }

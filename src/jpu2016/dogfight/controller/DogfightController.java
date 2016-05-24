@@ -44,7 +44,7 @@ public class DogfightController implements IOrderPerformer {
 			break;
 			
 			case SHOOT:
-				
+				this.lauchMissile(userOrder.getPlayer());
 			break;
 			
 			case NOP:
@@ -67,18 +67,37 @@ public class DogfightController implements IOrderPerformer {
 	private void lauchMissile(int player)
 	{
 		// Récupérer la position de l'avion (voir avec le joueur)
+		
 		// Missile m = new Missile(Direction.UP, new Dimension(30, 30));
 	}
 	
 	private void gameLoop()
 	{
-		//while(p.hit() != true)
-		//{
-			for(IMobile m : dogfightModel.getMobiles())
+		for(IMobile m : dogfightModel.getMobiles())
+		{
+			if(m.hit() == false)
 			{
 				m.move();
 			}
-		//}
+			
+		}
+		
 	}
+	
+	private boolean isWeaponOnMobile(final IMobile mobile, final IMobile weapon) {
+		if (((weapon.getPosition().getX() / weapon.getWidth()) >= (mobile.getPosition().getX() /
+		weapon.getWidth()))
+		 && ((weapon.getPosition().getX() / weapon.getWidth()) <=
+		((mobile.getPosition().getX() + mobile.getWidth()) / weapon.getWidth()))) {
+		 if (((weapon.getPosition().getY() / weapon.getHeight()) >= (mobile.getPosition().getY()
+		/ weapon.getHeight()))
+		 && ((weapon.getPosition().getY() / weapon.getHeight()) <=
+		((mobile.getPosition().getY() + mobile.getHeight()) / weapon.getHeight()))) {
+		 return true;
+		 }
+	}
+		
+	return false;
+	} 
 	
 }
