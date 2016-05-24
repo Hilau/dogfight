@@ -22,13 +22,13 @@ public class Missile extends Mobile{
 		distanceTraveled += 4 ;
 		}
 		else{
-			
+			this.getIDogfightModel().removeMobile(this);
 		}
 		
 			
 	}
 	public boolean isWeapon(){
-		return false;
+		return true;
 		
 	}
 	
