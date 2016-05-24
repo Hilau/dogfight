@@ -16,6 +16,7 @@ public class DogfightController implements IOrderPerformer {
 	private static int Time_SLEEP = 30;
 	private IViewSystem viewSystem;
 	private DogfightModel dogfightModel;
+	private Position position;
 	
 	public DogfightController(IDogfightModel dogfightModel)
 	{
@@ -67,7 +68,7 @@ public class DogfightController implements IOrderPerformer {
 	
 	private void lauchMissile(int player)
 	{
-		// Missile m = new Missile(Direction.UP, new Position();
+		// Missile m = new Missile(Direction.UP, Mobile.getPosition()+5);
 	}
 	
 	private void gameLoop()
