@@ -28,7 +28,7 @@ public interface IMobile {
 	
 	public boolean isPlayer(int player);
 	
-	public abstract void setDogfightModel(DogfightModel dogfightModel);
+	public void setDogfightModel(DogfightModel dogfightModel);
 	
 	public boolean hit();
 	

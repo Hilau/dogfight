@@ -1,6 +1,6 @@
 package jpu2016.dogfight.model;
 
-public abstract class Plane extends Mobile{
+public class Plane extends Mobile{
 
 	private static int SPEED = 2;
 	private static int WIDTH = 100;

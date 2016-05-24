@@ -1,6 +1,6 @@
 package jpu2016.dogfight.model;
 
-public abstract class Cloud extends Mobile{
+public class Cloud extends Mobile{
 
 	private static int SPEED = 1;
 	private static int WIDTH = 300;
