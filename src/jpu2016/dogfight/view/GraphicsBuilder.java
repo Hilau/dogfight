@@ -15,6 +15,14 @@ public class GraphicsBuilder {
 	}
 	
 	public void applyModelToGraphic(Graphics graphics, ImageObserver observer){
+		
+	}
+	
+	private void buildEmptySky(){
+		
+	}
+	
+	public void drawMobile(IMobile mobile, Graphics graphics, ImageObserver observer){
 		final BufferedImage imageMobile = new BufferedImage(mobile.getWidth(), mobile.getHeight(), Transparency.TRANSLUCENT);
 		final Graphics graphicsMobile = imageMobile.getGraphics();
 		graphicsMobile.drawImage(mobile.getImage(), 0, 0, mobile.getWidth(), mobile.getHeight(), observer);
@@ -42,14 +50,6 @@ public class GraphicsBuilder {
 					(mobile.getHeight() - this.dogfightModel.getArea().getHeight()) + mobile.getPosition().getY());
 					graphics.drawImage(imageMobileHV, 0, 0, observer);
 				}
-	}
-	
-	private void buildEmptySky(){
-		
-	}
-	
-	public void drawMobile(IMobile mobile, Graphics graphics, ImageObserver observer){
-		
 	}
 	
 	public int getGlobalWidth() {
