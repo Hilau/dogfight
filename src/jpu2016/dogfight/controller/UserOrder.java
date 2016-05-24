@@ -7,7 +7,8 @@ public class UserOrder implements IUserOrder {
 	
 	public UserOrder(int player, Order order)
 	{
-		
+		this.player = player;
+		this.order = order;
 	}
 	
 	public Order getOrder(){
@@ -16,7 +17,7 @@ public class UserOrder implements IUserOrder {
 	
 	public int getPlayer()
 	{
-		return 1;
+		return this.player;
 	}
 	
 }
