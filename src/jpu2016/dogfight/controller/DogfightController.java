@@ -9,6 +9,7 @@ import jpu2016.dogfight.model.Missile;
 import jpu2016.dogfight.model.Mobile;
 import jpu2016.dogfight.model.Plane;
 import jpu2016.dogfight.model.Position;
+import jpu2016.dogfight.view.DogfightView;
 import jpu2016.dogfight.view.IViewSystem;
 
 public class DogfightController implements IOrderPerformer {
@@ -17,6 +18,7 @@ public class DogfightController implements IOrderPerformer {
 	private IViewSystem viewSystem;
 	private DogfightModel dogfightModel;
 	private Position position;
+	private DogfightView dogfightView;
 	
 	public DogfightController(IDogfightModel dogfightModel)
 	{
@@ -59,6 +61,7 @@ public class DogfightController implements IOrderPerformer {
 	public void play()
 	{
 		this.gameLoop();
+		// dogfightView.displayMessage("Fin de la partie");
 	}
 	
 	public void setViewSystem(IViewSystem viewSystem)
@@ -68,7 +71,28 @@ public class DogfightController implements IOrderPerformer {
 	
 	private void lauchMissile(int player)
 	{
-		// Missile m = new Missile(Direction.UP, Mobile.getPosition()+5);
+		IMobile p = dogfightModel.getMobileByPlayer(player);
+		
+		switch(p.getDirection())
+		{
+			case UP:
+				Missile m = new Missile(Direction.UP, p.getPosition());
+				//Missile m2 = new Missile(Direction.UP, p.getY()-1);
+			break;
+			
+			case DOWN:
+				// Missile m = new Missile(Direction.UP, p.getPosition());
+			break;
+			
+			case LEFT:
+				// Missile m = new Missile(Direction.UP, p.getPosition());
+			break;
+			
+			case RIGHT:
+				// Missile m = new Missile(Direction.UP, p.getPosition());
+			break;
+		}
+		
 	}
 	
 	private void gameLoop()
@@ -79,6 +103,16 @@ public class DogfightController implements IOrderPerformer {
 			{
 				m.move();
 			}
+			
+			else
+			{
+				break;
+			}
+			
+		}*/
+		
+		/*for(int i=0;i<dogfightModel.getMobiles().length();i++)
+		{
 			
 		}*/
 		
