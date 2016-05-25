@@ -48,7 +48,23 @@ private Color color;
 	}
 	
 	public void move(){
-		
+		int move = 0;
+		switch(move){
+		case 1:
+			moveUp();
+			break;
+		case 2:
+			moveDown();
+			break;
+		case 3:
+			moveLeft();
+			break;
+		case 4:
+			moveRight();
+			break;
+		default:
+			break;
+		}
 	}
 	
 	public void placeInArea(IArea area){
