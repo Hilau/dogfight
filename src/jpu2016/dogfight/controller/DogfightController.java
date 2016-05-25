@@ -16,13 +16,14 @@ public class DogfightController implements IOrderPerformer {
 
 	private static int Time_SLEEP = 30;
 	private IViewSystem viewSystem;
-	private DogfightModel dogfightModel;
+	private IDogfightModel dogfightModel;
 	private Position position;
 	private DogfightView dogfightView;
 	
 	public DogfightController(IDogfightModel dogfightModel)
 	{
-		
+		// this.dogfightModel = new DogfightModel();
+		this.dogfightModel = dogfightModel;
 	}
 	
 	public void orderPerform(UserOrder userOrder)
